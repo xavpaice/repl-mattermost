@@ -1,0 +1,9 @@
+{{- define "mattermost.hardcodedValues" -}}
+mattermost-team-edition:
+  ingress:
+    hosts:
+      - {{ .Values.ingress.hostname }}
+{{- end -}}
+
+{{- $_ := mergeOverwrite .Values (include "mattermost.hardcodedValues" . | fromYaml) -}}
+

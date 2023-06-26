@@ -1,0 +1,9 @@
+dependencies:
+- name: mattermost-team-edition
+  repository: https://helm.mattermost.com
+  version: 6.6.28
+- name: replicated
+  repository: oci://registry.replicated.com/library
+  version: 0.0.1-alpha.17
+digest: sha256:f285b07e66095829d440279e96b5bae58c90d5c5903428779e99ca32919c5ed3
+generated: "2023-06-26T12:40:57.619949+12:00"
