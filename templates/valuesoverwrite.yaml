@@ -2,7 +2,7 @@
 mattermost-team-edition:
   ingress:
     hosts:
-      - {{ .Values.ingress.hostname }}
+      - {{ .Values.global.replicated.hostname }}
 {{- end -}}
 
 {{- $_ := mergeOverwrite .Values (include "mattermost.hardcodedValues" . | fromYaml) -}}
