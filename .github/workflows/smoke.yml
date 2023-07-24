@@ -37,12 +37,9 @@ jobs:
         with:
           app-slug: ${{ secrets.REPLICATED_APP }}
           api-token: ${{ secrets.REPLICATED_API_TOKEN }}
-          yaml-dir: kots
           kubernetes-distribution: ${{ matrix.cluster.distribution }}
           kubernetes-version: ${{ matrix.cluster.version }}
           installation-method: helm
           test-script: ./tests/test.sh
           helm-chart-name: repl-mattermost
-          helm-values: |
-            image:
-              tag: latest
+          yaml-dir: manifests
